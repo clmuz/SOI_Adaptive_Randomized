@@ -1,0 +1,100 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsfonts}
+\usepackage{amssymb,amsmath,latexsym}
+\usepackage{amsthm}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+
+\usepackage[dvips]{graphics}
+\usepackage[dvips]{graphicx}
+\usepackage[dvips]{color}
+\usepackage{curves}
+\usepackage{indentfirst}
+\usepackage{math, notations, url}
+% \usepackage{epsfig}             % MUST!!!
+\usepackage{cite}
+
+\usepackage{mathrsfs}   % mathscr
+\usepackage{pgfplots}
+\usepackage{epstopdf}
+% \usepackage{subfig}
+\usepackage{subcaption}
+\usepackage{hyperref}
+
+\pgfplotsset{compat=1.12}
+
+\pgfplotscreateplotcyclelist{black dashed}{%
+  solid\\%
+  densely dashed\\%
+  densely dashdotted\\%
+}
+
+\newtheorem{Theorem}{\hspace{0.56cm}{\bf Т~е~о~р~е~м~а }}
+\newtheorem{theorem}{\hspace{0.56cm}{\bf Т~е~о~р~е~м~а }}
+\newtheorem{Lemma}{\hspace{0.56cm}{\bf Л~е~м~м~а }}
+\newtheorem{lemma}{\hspace{0.56cm}{\bf Л~е~м~м~а }}
+%\newexample{example}{\hspace{0.56cm}{\bf П~р~и~м~е~р }}
+\newtheorem{Nerav}{{}}
+\newtheorem{Collorary}{\hspace{0.56cm}{\bf С~л~е~д~с~т~в~и~е}}
+\newtheorem{collorary}{\hspace{0.56cm}{\bf С~л~е~д~с~т~в~и~е}}
+\newtheorem{Definition}{\hspace{0.56cm}{\bf О~п~р~е~д~е~л~е~н~и~е}}
+\newtheorem{definition}{\hspace{0.56cm}{\bf О~п~р~е~д~е~л~е~н~и~е}}
+%\newtheorem{proof}{\hspace{0.56cm}{\it Доказательство}}
+%\newtheorem{theorem}{Theorem} %[section]
+%\newtheorem{proposition}{Proposition}%[section]
+%\newtheorem{lemma}{Лемма}%[section]
+%\newtheorem{definition}{Definition}%[section]
+%\newtheorem{fig}{Рис.}%[section]
+\newtheorem{example}{\hspace{0.56cm}{\bf П~р~и~м~е~р }}%[section]
+
+
+\renewcommand{\contentsname}{\footnotesize{ \hspace{1.cm}{\rm С~О~Д~Е~Р~Ж~А~Н~И~Е \vspace{-0.3cm}}}}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\hspace{0.56cm}\arabic{subsection}.}
+\renewcommand{\thesubsubsection}{\hspace{0.56cm}\arabic{subsection}.\arabic{subsubsection}.}
+
+\textheight 16.6cm
+%\textwidth 11.3cm
+\textwidth 10.8cm
+\footskip 0.6cm
+\pagestyle{plain}
+\parindent 0.56cm
+%\renewcommand{\thepage}{\hfill{\footnotesize{\rm}}}
+\renewcommand{\thepage}{\hfill{\footnotesize{ \arabic{page}}}}
+%\renewcommand{\thepage}{\hspace{-10.58cm}{\footnotesize\arabic{page}}}
+%\renewcommand{\thepage}{\hspace{-10.48cm}{\footnotesize\arabic{page}}}
+%\renewcommand{\thepage}{\hspace{-10.32cm}{\footnotesize\arabic{page}}}
+\renewcommand{\refname}{}
+%\renewcommand{\baselinestretch}{1.5}
+
+
+
+
+\begin{document}
+%\renewcommand{\example}{\hspace{0.56cm}{\bf П~р~и~м~е~р }}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Двоеточие после номера рисунка заменить на точку (Львовский, 166)
+%  и ``узкая'' подрисуночная подпись
+%  (EMTEX\TEXINPUT\LATEX209\book.sty)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\long\def\@makecaption#1#2{%
+   \vskip 10\p@
+   \setbox\@tempboxa\hbox{#1. #2}%
+   \ifdim \wd\@tempboxa >120mm
+       \begin{center}
+       #1. \parbox[t]{130mm}{#2}
+       \end{center}
+     \else
+       \begin{center}
+        #1. #2
+       \end{center}
+   \fi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\refname}{\normalsize Список литературы }
+
+\include{prodanov/prodanov}
+% \include{granichin6/granichin_en}
+
+\end{document}
