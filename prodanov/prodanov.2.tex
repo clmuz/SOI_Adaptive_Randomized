@@ -114,4 +114,6 @@ $$v, w \in \mathscr{N}, \exists i \in 1..s :\ c_{P_i}(v) \ne c_{P_i}(w) \Rightar
 \subsubsection*{Оценка качества}
 \label{ssub:quality}
 
-Для оценки качества сообщества используется целевая функция модулярность \eqref{eq:modularity}, а в качестве тестовых данных --- графы, используемые для оценки алгоритмов на конкурсе 10th DIMACS Implementation Challenge, которые можно найти по адресу \url{http://www.cc.gatech.edu/dimacs10/archive/clustering.shtml}.
+Для оценки качества сообщества используется целевая функция модулярность \eqref{eq:modularity}, а в качестве тестовых данных --- графы, используемые для оценки алгоритмов на конкурсе 10th DIMACS Implementation Challenge, которые можно найти по адресу \url{http://www.cc.gatech.edu/dimacs10/archive/clustering.shtml}. Граф \emph{celegans\_ metabolic} в работе обозначается как \emph{celegans}.
+
+Так же в качестве тестового графа использовался синтетический граф \emph{auto40} из $N = 40,000$ вершин, $K = 40$ сообществ, и с вероятностями $p_1 = 0.1$ и $p_2 = 10^{-4}$ обнаружить связь между вершинами одного сообщества или вершинами разных сообществ, соответственно.

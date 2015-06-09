@@ -14,20 +14,22 @@
 % \usepackage{epsfig}             % MUST!!!
 \usepackage{cite}
 
+% ------------------- Extra usepackages
 \usepackage{mathrsfs}   % mathscr
 \usepackage{pgfplots}
 \usepackage{epstopdf}
-% \usepackage{subfig}
 \usepackage{subcaption}
 \usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage[normalem]{ulem}
+\usepackage{caption}
+% ------------------- Extra usepackages
 
-\pgfplotsset{compat=1.12}
-
-\pgfplotscreateplotcyclelist{black dashed}{%
-  solid\\%
-  densely dashed\\%
-  densely dashdotted\\%
-}
+% ------------------- Tabular cells
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+% ------------------- Tabular cells
 
 \newtheorem{Theorem}{\hspace{0.56cm}{\bf Ò~å~î~ð~å~ì~à }}
 \newtheorem{theorem}{\hspace{0.56cm}{\bf Ò~å~î~ð~å~ì~à }}
