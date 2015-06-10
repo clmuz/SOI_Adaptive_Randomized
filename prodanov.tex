@@ -55,6 +55,12 @@
 \renewcommand{\thesubsection}{\hspace{0.56cm}\arabic{subsection}.}
 \renewcommand{\thesubsubsection}{\hspace{0.56cm}\arabic{subsection}.\arabic{subsubsection}.}
 
+\makeatletter
+%\renewcommand{\p@subsection}{}
+\renewcommand{\p@subsection}{\arabic{subsection}\expandafter\@gobble}
+\makeatother
+
+
 \textheight 16.6cm
 %\textwidth 11.3cm
 \textwidth 10.8cm
@@ -97,6 +103,6 @@
 \renewcommand{\refname}{\normalsize Список литературы }
 
 \include{prodanov/prodanov}
-% \include{granichin6/granichin_en}
+\include{prodanov/prodanov.en}
 
 \end{document}
